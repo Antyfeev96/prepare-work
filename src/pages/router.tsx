@@ -8,14 +8,6 @@ export const router = createBrowserRouter(
         <Route path="/" element={<Layout />}>
             <Route path="auth" element={<Auth />} />
             <Route path="home" element={<Home/>}/>
-            <Route
-                path="dashboard"
-                loader={({ request }) =>
-                    fetch("/api/dashboard.json", {
-                        signal: request.signal,
-                    })
-                }
-            />
         </Route>
     )
 );
