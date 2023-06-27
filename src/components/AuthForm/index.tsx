@@ -1,35 +1,36 @@
 import {Container, Input, Inputs, SendFormButton, Title} from './styles';
 import {useNavigate} from 'react-router-dom';
-import {useEffect} from 'react';
+import {FormEvent} from 'react';
 
 function AuthForm() {
     const navigate = useNavigate()
-    const login = () => navigate('/home')
-
-    const onKeyDown = (e: KeyboardEventInit) => {
-        if (e.key === 'Enter') {
-            login()
-        }
+    const submitForm = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const target = e.target as typeof e.target & {
+            username: { value: string };
+            password: { value: string };
+        };
+        const username = target.username.value
+        const password = target.password.value
+        const user = JSON.stringify({
+            username,
+            password
+        })
+        localStorage.setItem('user', user)
+        navigate('/home')
     }
 
-    useEffect(() => {
-        document.addEventListener('keydown', onKeyDown)
-
-        return () => {
-            document.removeEventListener('keydown', onKeyDown)
-        }
-    }, [])
-
     return (
-        <Container>
+        <Container onSubmit={submitForm}>
             <Title>Форма авторизации</Title>
             <Inputs>
-                <Input placeholder="Login"/>
-                <Input placeholder="Password"/>
+                <label htmlFor="username">Логин</label>
+                <Input id="username" placeholder="Login"/>
+                <label htmlFor="password">Пароль</label>
+                <Input id="password" placeholder="Password"/>
             </Inputs>
             <SendFormButton
-                type="button"
-                onClick={login}
+                type="submit"
             >
                 Войти
             </SendFormButton>

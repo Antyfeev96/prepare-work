@@ -4,5 +4,37 @@
       "username": "Dmitrii",
       "password": "Qwerty123"
     }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "completed": false,
+      "title": "Посеять хлеб",
+      "description": "Посеять хлеб"
+    },
+    {
+      "id": 2,
+      "completed": false,
+      "title": "Посеять хлеб",
+      "description": "Посеять хлеб"
+    },
+    {
+      "id": 3,
+      "completed": false,
+      "title": "Посеять хлеб",
+      "description": "Посеять хлеб"
+    },
+    {
+      "id": 4,
+      "completed": false,
+      "title": "Посеять хлеб",
+      "description": "Посеять хлеб"
+    },
+    {
+      "id": 5,
+      "completed": false,
+      "title": "Посеять хлеб",
+      "description": "Посеять хлеб"
+    }
   ]
 }
