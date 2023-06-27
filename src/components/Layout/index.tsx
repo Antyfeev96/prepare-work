@@ -1,4 +1,4 @@
-import Navbar from '../Navbar';
+import {memoNavbar as Navbar} from '../Navbar';
 import {Outlet, useLocation} from 'react-router-dom';
 import {Container} from './styles';
 

@@ -16,12 +16,12 @@ export const routes: Routes[] = [
         url: '/tasks',
         title: 'Tasks list'
     },
+    // {
+    //     url: '/hzhzhz',
+    //     title: '???'
+    // },
     {
-        url: '/hzhzhz',
-        title: '???'
-    },
-    {
-        url: '/auth',
+        url: '/logout',
         title: 'Logout'
     },
 

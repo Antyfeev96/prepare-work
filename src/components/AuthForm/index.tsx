@@ -6,7 +6,7 @@ function AuthForm() {
     const navigate = useNavigate()
     const submitForm = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const target = e.target as typeof e.target & {
+        const target = e.target as EventTarget & {
             username: { value: string };
             password: { value: string };
         };

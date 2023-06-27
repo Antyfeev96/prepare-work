@@ -1,13 +1,18 @@
 import {Container, NavItem} from './styles';
 import {routes} from './routes';
+import {memo} from 'react';
 
-const Navbar = () => {
+export const Navbar = () => {
     return (
         <Container>
-            {routes.map(({ url, title }) => <NavItem  key={url} to={url}>{title}</NavItem>)}
+            {routes.map(({ url, title }) => {
+                console.log(`RENDER ${title}`)
+                return (
+                    <NavItem key={url} to={url}>{title}</NavItem>
+                )
+            })}
         </Container>
     );
 };
 
-export default Navbar;
-
+export const memoNavbar = memo(Navbar)
