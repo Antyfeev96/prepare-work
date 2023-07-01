@@ -2,7 +2,7 @@ import {Avatar, Container, Data} from './styles';
 import icon from 'assets/react.svg'
 
 function UserCard() {
-    const { username } = JSON.parse(localStorage.getItem('user') || "''")
+    const { username } = JSON.parse(localStorage.getItem('user') || "null")
 
     return (
         <Container>

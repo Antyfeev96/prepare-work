@@ -1,16 +1,7 @@
-import {memoNavbar as Navbar} from '../Navbar';
-import {Outlet, useLocation} from 'react-router-dom';
-import {Container} from './styles';
+import ProtectedLayout from './protected.tsx'
+import LoginLayout from './login.tsx'
 
-const Layout = () => {
-    const location = useLocation();
-    const user = location.pathname !== '/auth'
-    return (
-        <Container>
-            {user && <Navbar/>}
-            <Outlet/>
-        </Container>
-    );
-};
-
-export default Layout;
+export {
+    ProtectedLayout,
+    LoginLayout
+}
