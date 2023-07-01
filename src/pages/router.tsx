@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Auth from './auth';
 import Home from './home';
+import CreateTaskPage from './create';
 import Logout from './logout';
 import {LoginLayout, ProtectedLayout} from '../components/Layout';
 
@@ -11,7 +12,7 @@ const AppRouter = () => {
             <Routes>
                 <Route element={<ProtectedLayout />}>
                     <Route path="home" element={<Home/>}/>
-                    <Route path="create" element={<div>CREATE TASK</div>}/>
+                    <Route path="create" element={<CreateTaskPage />}/>
                     <Route path="tasks" element={<div>TASKS LIST</div>}/>
                     <Route path="logout" element={<Logout/>}/>
                 </Route>
