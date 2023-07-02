@@ -4,6 +4,7 @@ import Home from './home';
 import CreateTaskPage from './create';
 import Logout from './logout';
 import {LoginLayout, ProtectedLayout} from '../components/Layout';
+import TasksPage from './tasks';
 
 
 const AppRouter = () => {
@@ -13,7 +14,7 @@ const AppRouter = () => {
                 <Route element={<ProtectedLayout />}>
                     <Route path="home" element={<Home/>}/>
                     <Route path="create" element={<CreateTaskPage />}/>
-                    <Route path="tasks" element={<div>TASKS LIST</div>}/>
+                    <Route path="tasks" element={<TasksPage />}/>
                     <Route path="logout" element={<Logout/>}/>
                 </Route>
                 <Route element={<LoginLayout/>}>

@@ -9,3 +9,15 @@ export const Container = styled(Flex)`
   align-items: center;
   gap: 25px;
 `
+
+export const ContentContainer = styled(Flex)`
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 0;
+  padding: 25px;
+`
+
+
