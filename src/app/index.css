@@ -31,3 +31,11 @@ html, body, #root {
 #root {
     display: flex;
 }
+
+input[type=checkbox] {
+    margin: 0;
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}

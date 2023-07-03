@@ -12,6 +12,7 @@ export const Container = styled(Flex)`
   > div {
     > input {
       vertical-align: middle;
+      margin-left: 10px;
     }
   }
 `

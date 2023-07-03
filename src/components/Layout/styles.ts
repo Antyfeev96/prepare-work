@@ -17,7 +17,6 @@ export const ContentContainer = styled(Flex)`
   align-items: center;
   gap: 10px;
   flex: 1 1 0;
-  padding: 25px;
 `
 
 

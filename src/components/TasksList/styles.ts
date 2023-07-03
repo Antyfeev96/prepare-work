@@ -9,6 +9,6 @@ export const Container = styled(Grid)`
   grid-gap: 10px;
   
   &::-webkit-scrollbar {
-    opacity: 0;
+    display: none;
   }
 `
