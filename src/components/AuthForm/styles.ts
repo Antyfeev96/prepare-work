@@ -7,7 +7,7 @@ export const Container = styled.form`
   align-items: center;
   gap: 10px;
   padding: 20px;
-  border: 1px solid grey;
+  border: 1px solid var(--colors-text);
 `
 
 export const Title = styled.h1`
@@ -29,7 +29,7 @@ export const SendFormButton = styled.button`
   padding: 10px;
   border: none;
   background-color: #00bbff;
-  color: white;
+  color: var(--colors-text);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;

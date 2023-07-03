@@ -7,7 +7,8 @@ export const Form = styled.form`
   justify-content: center;
   gap: 10px;
   padding: 25px;
-  border: 3px solid grey;
+  border: 3px solid var(--colors-text);
+  color: var(--colors-text);
   
   > label {
     display: flex;
@@ -21,9 +22,10 @@ export const Form = styled.form`
 
 export const Button = styled.button`
   padding: 10px;
-  background-color: lightgreen;
+  background-color: var(--colors-button-bg);
   border: none;
   -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;
+  color: var(--colors-text);
   
   &:hover {
     cursor: pointer;

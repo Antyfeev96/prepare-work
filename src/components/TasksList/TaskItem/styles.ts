@@ -7,7 +7,8 @@ export const Container = styled(Flex)`
   align-items: flex-start;
   gap: 10px;
   padding: 10px;
-  border: 3px solid green;
+  border: 3px solid var(--colors-button-bg);
+  color: var(--colors-text);
   
   > div {
     > input {
@@ -18,8 +19,8 @@ export const Container = styled(Flex)`
 `
 
 export const Button = styled.button`
-  background-color: green;
-  color: white;
+  background-color: var(--colors-button-bg);
+  color: var(--colors-text);
   padding: 10px;
   border: none;
   -webkit-border-radius: 10px;

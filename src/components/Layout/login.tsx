@@ -1,5 +1,6 @@
 import {Navigate, Outlet} from 'react-router-dom';
 import {Container} from './styles';
+import Header from '../Header';
 
 export const LoginLayout = () => {
     const user =  JSON.parse(localStorage.getItem('user') || "null")
@@ -10,6 +11,7 @@ export const LoginLayout = () => {
 
     return (
         <Container>
+            <Header />
             <Outlet/>
         </Container>
     );

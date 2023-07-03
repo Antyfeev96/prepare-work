@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import {MemoNavbar as Navbar} from '../Navbar';
 import {Container, ContentContainer} from './styles.ts';
+import Header from '../Header';
 
 
 interface Props {
@@ -19,6 +20,7 @@ const ProtectedLayout = ({redirectPath = '/auth'}: Props) => {
 
     return (
         <Container>
+            <Header />
             <Navbar/>
             <ContentContainer>
                 <Outlet/>

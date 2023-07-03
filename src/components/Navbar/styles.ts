@@ -14,14 +14,13 @@ export const NavItem = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  color: var(--colors-text);
+  background-color: var(--colors-bg);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  color: black;
   
   &.active {
     background-color: #38aef8;
-    
   }
 `

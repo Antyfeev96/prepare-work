@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {LoginLayout, ProtectedLayout} from '../components/Layout';
 import Auth from './auth';
 import Home from './home';
 import CreateTaskPage from './create';
 import Logout from './logout';
-import {LoginLayout, ProtectedLayout} from '../components/Layout';
 import TasksPage from './tasks';
 
 

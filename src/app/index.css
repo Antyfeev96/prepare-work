@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
+    color: var(--colors-text);
+    background-color: var(--colors-bg);
 
     color-scheme: light dark;
 
@@ -21,6 +25,7 @@ a {
 
 body {
     margin: 0;
+    background-color: var(--colors-bg);
 }
 
 html, body, #root {
@@ -38,4 +43,16 @@ input[type=checkbox] {
 
 input[type=checkbox]:hover {
     cursor: pointer;
+}
+
+body[data-theme='light'] {
+    --colors-text: black;
+    --colors-bg: whitesmoke;
+    --colors-button-bg: #5be95b;
+}
+
+body[data-theme='dark'] {
+    --colors-text: whitesmoke;
+    --colors-bg: grey;
+    --colors-button-bg: green;
 }
