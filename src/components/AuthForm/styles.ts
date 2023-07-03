@@ -8,6 +8,7 @@ export const Container = styled.form`
   gap: 10px;
   padding: 20px;
   border: 1px solid var(--colors-text);
+  color: var(--colors-text);
 `
 
 export const Title = styled.h1`
@@ -28,7 +29,7 @@ export const SendFormButton = styled.button`
   display: flex;
   padding: 10px;
   border: none;
-  background-color: #00bbff;
+  background-color: var(--colors-button-bg);
   color: var(--colors-text);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

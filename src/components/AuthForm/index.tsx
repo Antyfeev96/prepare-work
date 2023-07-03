@@ -1,6 +1,7 @@
 import {Container, Input, Inputs, SendFormButton, Title} from './styles';
 import {useNavigate} from 'react-router-dom';
 import {FormEvent} from 'react';
+import {useTranslation} from 'react-i18next';
 
 function AuthForm() {
     const navigate = useNavigate()
@@ -20,19 +21,19 @@ function AuthForm() {
         navigate('/home')
     }
 
+    const { t } = useTranslation()
+
     return (
         <Container onSubmit={submitForm}>
-            <Title>Форма авторизации</Title>
+            <Title>{t('auth.title')}</Title>
             <Inputs>
-                <label htmlFor="username">Логин</label>
-                <Input id="username" placeholder="Login"/>
-                <label htmlFor="password">Пароль</label>
-                <Input id="password" placeholder="Password"/>
+                <label htmlFor="username">{t('auth.login.label')}</label>
+                <Input id="username" placeholder={t('auth.login.placeholder')}/>
+                <label htmlFor="password">{t('auth.pwd.label')}</label>
+                <Input id="password" placeholder={t('auth.pwd.placeholder')}/>
             </Inputs>
-            <SendFormButton
-                type="submit"
-            >
-                Войти
+            <SendFormButton type="submit">
+                {t('auth.submit')}
             </SendFormButton>
         </Container>
     );

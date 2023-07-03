@@ -1,0 +1,18 @@
+{
+  "theme": {
+    "light": "light theme",
+    "dark": "dark theme"
+  },
+  "auth": {
+    "title": "Authentication form",
+    "login": {
+      "label": "Login",
+      "placeholder": "Type your login..."
+    },
+    "pwd": {
+      "label": "Password",
+      "placeholder": "Type your password..."
+    },
+    "submit": "Sign in"
+  }
+}

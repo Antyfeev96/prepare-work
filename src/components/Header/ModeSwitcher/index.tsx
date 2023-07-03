@@ -1,6 +1,7 @@
 import {Container} from './styles.ts';
 import {IoMoon, IoMoonOutline} from 'react-icons/io5'
 import {useEffect, useState} from 'react';
+import {useTranslation} from 'react-i18next';
 
 const ModeSwitcher = () => {
 
@@ -12,6 +13,8 @@ const ModeSwitcher = () => {
         document.body.setAttribute('data-theme', theme)
     }, [theme])
 
+    const {t} = useTranslation()
+
     return (
         <Container onClick={toggleTheme}>
             {
@@ -19,7 +22,13 @@ const ModeSwitcher = () => {
                     ? <IoMoonOutline size="14px"/>
                     : <IoMoon size="14px"/>
             }
-            <span>{theme} theme</span>
+            <span>
+                {
+                    theme === 'light'
+                        ? t('theme.light')
+                        : t('theme.dark')
+                }
+            </span>
         </Container>
     );
 };
