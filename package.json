@@ -11,6 +11,8 @@
     "server": "json-server -w server/db.json -p 8080"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/react-redux": "^7.1.25",
     "antd": "^5.6.4",
     "i18next": "^23.2.6",
     "i18next-browser-languagedetector": "^7.1.0",
@@ -21,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.1",
     "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.12.0",
     "sort-by": "^1.2.0",
     "styled-components": "^6.0.0-rc.3"
