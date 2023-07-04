@@ -6,23 +6,19 @@ interface Routes {
 export const routes: Routes[] = [
     {
         url: '/home',
-        title: 'Home'
+        title: 'home'
     },
     {
         url: '/create',
-        title: 'Create task'
+        title: 'createTask'
     },
     {
         url: '/tasks',
-        title: 'Tasks list'
+        title: 'tasksList'
     },
-    // {
-    //     url: '/hzhzhz',
-    //     title: '???'
-    // },
     {
         url: '/logout',
-        title: 'Logout'
+        title: 'logout'
     },
 
 ]

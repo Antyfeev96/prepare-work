@@ -3,6 +3,34 @@
     "light": "light theme",
     "dark": "dark theme"
   },
+  "navbar": {
+    "home": "Home",
+    "createTask": "Create task",
+    "tasksList": "Tasks list",
+    "logout": "Logout"
+  },
+  "home": {
+    "title": "Home page",
+    "city": "Saint-Petersburg",
+    "spec": "Frontend"
+  },
+  "createTask": {
+    "title": "Name",
+    "description": "Description",
+    "status": "Execution status",
+    "submitButton": "Create task"
+  },
+  "tasksList": {
+    "searchQuery": "Enter task name",
+    "filterByStatus": "Filter by status",
+    "status": "Execution status",
+    "task": {
+      "title": "Title",
+      "description": "Description",
+      "status": "Status",
+      "deleteButton": "Delete task"
+    }
+  },
   "auth": {
     "title": "Authentication form",
     "login": {

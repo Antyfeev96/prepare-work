@@ -1,16 +1,20 @@
 import {Button, Container} from './styles.ts';
 import {memo} from 'react';
+import {useTranslation} from 'react-i18next';
 
 export const Task = () => {
+
+    const { t } = useTranslation()
+
     return (
         <Container>
-            <div>Название</div>
-            <div>Описание</div>
+            <div>{t('tasksList.task.title')}</div>
+            <div>{t('tasksList.task.description')}</div>
             <div>
-                <label htmlFor="">Статус:</label>
+                <label htmlFor="">{t('tasksList.task.status')}:</label>
                 <input type="checkbox" defaultChecked={Math.random() > 0.5}/>
             </div>
-            <Button>Удалить задачу</Button>
+            <Button>{t('tasksList.task.deleteButton')}</Button>
         </Container>
     );
 };

@@ -1,9 +1,13 @@
 import {Container, Input} from './styles.ts';
+import {useTranslation} from 'react-i18next';
 
 const SearchInput = () => {
+
+    const { t } = useTranslation()
+
     return (
         <Container>
-            <label htmlFor="search-query">Введите название</label>
+            <label htmlFor="search-query">{t('tasksList.searchQuery')}</label>
             <Input id="search-query"/>
         </Container>
     );

@@ -3,6 +3,34 @@
     "light": "светлая тема",
     "dark": "тёмная тема"
   },
+  "navbar": {
+    "home": "Главная",
+    "createTask": "Создать задачу",
+    "tasksList": "Список задач",
+    "logout": "Выйти"
+  },
+  "home": {
+    "title": "Главная страница",
+    "city": "Санкт-Петербург",
+    "spec": "Фронтенд"
+  },
+  "createTask": {
+    "title": "Название",
+    "description": "Описание",
+    "status": "Статус выполнения",
+    "submitButton": "Создать задачу"
+  },
+  "tasksList": {
+    "searchQuery": "Введите название",
+    "filterByStatus": "Фильтровать по статусу",
+    "status": "Статус выполнения",
+    "task": {
+      "title": "Название",
+      "description": "Описание",
+      "status": "Статус",
+      "deleteButton": "Удалить задачу"
+    }
+  },
   "auth": {
     "title": "Форма авторизации",
     "login": {
