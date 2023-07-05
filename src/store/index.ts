@@ -10,18 +10,18 @@ import {
     PURGE,
     REGISTER,
 } from 'redux-persist'
-import {tasksAPI} from '../services/TasksService.ts';
+import {todosAPI} from '../services/TodosService.ts';
 
 const persistConfig = {
     key: 'root',
     storage,
     whitelist: ['userReducer'],
-    blacklist: [tasksAPI.reducerPath]
+    blacklist: [todosAPI.reducerPath]
 }
 
 const rootReducer = combineReducers({
     userReducer,
-    [tasksAPI.reducerPath]: tasksAPI.reducer
+    [todosAPI.reducerPath]: todosAPI.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -34,7 +34,7 @@ export const setupStore = () => {
                 serializableCheck: {
                     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
                 },
-            }).concat(tasksAPI.middleware)
+            }).concat(todosAPI.middleware)
     })
 }
 

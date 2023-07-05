@@ -1,18 +1,18 @@
 import {Filters} from './styles.ts';
-import TasksList from '../../components/TasksList';
+import TodoList from '../../components/TodoList';
 import SearchInput from '../../components/SearchInput';
 import FilterByStatus from '../../components/FilterByStatus';
 
-const TasksPage = () => {
+const TodosPage = () => {
     return (
         <>
             <Filters>
                 <SearchInput/>
                 <FilterByStatus/>
             </Filters>
-            <TasksList/>
+            <TodoList/>
         </>
     );
 };
 
-export default TasksPage;
+export default TodosPage;

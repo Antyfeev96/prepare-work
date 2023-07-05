@@ -1,11 +1,11 @@
 import {Button, Form} from './styles.ts';
 import {FormEvent} from 'react';
 import {useTranslation} from 'react-i18next';
-import {useCreateTaskMutation} from '../../services/TasksService.ts';
+import {useCreateTodoMutation} from '../../services/TodosService.ts';
 
-const CreateTaskForm = () => {
+const CreateTodoForm = () => {
 
-    const [createTask] = useCreateTaskMutation()
+    const [createTodo] = useCreateTodoMutation()
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -14,13 +14,12 @@ const CreateTaskForm = () => {
             description: { value: string };
             completed: { checked: boolean };
         };
-        const post = {
+        const todo = {
             title: target.title.value,
             description: target.description.value,
             completed: target.completed.checked
         }
-        console.log(post)
-        await createTask(post)
+        await createTodo(todo)
     }
 
     const { t } = useTranslation()
@@ -28,20 +27,20 @@ const CreateTaskForm = () => {
     return (
         <Form onSubmit={onSubmit}>
             <label>
-                <span>{t('createTask.title')}:</span>
+                <span>{t('createTodo.title')}:</span>
                 <input name="title" type="text"/>
             </label>
             <label>
-                <span>{t('createTask.description')}:</span>
+                <span>{t('createTodo.description')}:</span>
                 <input name="description" type="text"/>
             </label>
             <label>
-                <span>{t('createTask.status')}</span>
+                <span>{t('createTodo.status')}</span>
                 <input type="checkbox" name="completed"/>
             </label>
-            <Button type="submit">{t('createTask.submitButton')}</Button>
+            <Button type="submit">{t('createTodo.submitButton')}</Button>
         </Form>
     );
 };
 
-export default CreateTaskForm;
+export default CreateTodoForm;

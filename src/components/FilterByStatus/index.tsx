@@ -7,7 +7,7 @@ const FilterByStatus = () => {
 
     return (
         <Container>
-            <label htmlFor="status-filter">{t('tasksList.filterByStatus')}</label>
+            <label htmlFor="status-filter">{t('todoList.filterByStatus')}</label>
             <input id="status-filter" type="checkbox"/>
         </Container>
     );
