@@ -5,6 +5,7 @@ import {
 import {MemoNavbar as Navbar} from '../Navbar';
 import {Container, ContentContainer} from './styles.ts';
 import Header from '../Header';
+import {useAppSelector} from '../../hooks/redux.ts';
 
 
 interface Props {
@@ -12,8 +13,8 @@ interface Props {
 }
 
 const ProtectedLayout = ({redirectPath = '/auth'}: Props) => {
-    const user = JSON.parse(localStorage.getItem('user') || "null")
-    if (!user) {
+    const { username } = useAppSelector(state => state.userReducer)
+    if (!username) {
         console.log('no user')
         return <Navigate to={redirectPath} replace/>;
     }

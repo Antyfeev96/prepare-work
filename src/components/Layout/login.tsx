@@ -1,11 +1,12 @@
 import {Navigate, Outlet} from 'react-router-dom';
 import {Container} from './styles';
 import Header from '../Header';
+import {useAppSelector} from '../../hooks/redux.ts';
 
 export const LoginLayout = () => {
-    const user =  JSON.parse(localStorage.getItem('user') || "null")
-    if (user) {
-        console.log(user)
+    const { username } = useAppSelector(state => state.userReducer)
+    if (username) {
+        console.log(username)
         return <Navigate to="/home" replace />
     }
 

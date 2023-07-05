@@ -1,11 +1,26 @@
 import {Button, Form} from './styles.ts';
 import {FormEvent} from 'react';
 import {useTranslation} from 'react-i18next';
+import {useCreateTaskMutation} from '../../services/TasksService.ts';
 
 const CreateTaskForm = () => {
 
-    const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const [createTask] = useCreateTaskMutation()
+
+    const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        const target = e.target as EventTarget & {
+            title: { value: string };
+            description: { value: string };
+            completed: { checked: boolean };
+        };
+        const post = {
+            title: target.title.value,
+            description: target.description.value,
+            completed: target.completed.checked
+        }
+        console.log(post)
+        await createTask(post)
     }
 
     const { t } = useTranslation()

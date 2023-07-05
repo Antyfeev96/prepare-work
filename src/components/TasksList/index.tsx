@@ -1,10 +1,13 @@
 import {Container} from './styles.ts';
 import {MemoTask} from './TaskItem';
+import {useFetchAllTasksQuery} from '../../services/TasksService.ts';
 
 const TasksList = () => {
+    const {data} = useFetchAllTasksQuery(null)
+
     return (
         <Container>
-            {[...Array(24)].map((_, index) => <MemoTask key={`task-${index}`} />)}
+            {data?.map((props) => <MemoTask key={props.id} {...props} />)}
         </Container>
     );
 };

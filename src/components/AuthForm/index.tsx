@@ -2,9 +2,12 @@ import {Container, Input, Inputs, SendFormButton, Title} from './styles';
 import {useNavigate} from 'react-router-dom';
 import {FormEvent} from 'react';
 import {useTranslation} from 'react-i18next';
+import {useAppDispatch} from '../../hooks/redux.ts';
+import {login} from '../../store/reducers/UserSlice.ts';
 
 function AuthForm() {
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
     const submitForm = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const target = e.target as EventTarget & {
@@ -12,16 +15,11 @@ function AuthForm() {
             password: { value: string };
         };
         const username = target.username.value
-        const password = target.password.value
-        const user = JSON.stringify({
-            username,
-            password
-        })
-        localStorage.setItem('user', user)
+        dispatch(login(username))
         navigate('/home')
     }
 
-    const { t } = useTranslation()
+    const {t} = useTranslation()
 
     return (
         <Container onSubmit={submitForm}>

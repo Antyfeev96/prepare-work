@@ -1,34 +1,22 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "completed": false,
-      "title": "Посеять хлеб",
-      "description": "Посеять хлеб"
-    },
-    {
-      "id": 2,
-      "completed": false,
-      "title": "Посеять хлеб",
-      "description": "Посеять хлеб"
-    },
+  "tasks": [
     {
       "id": 3,
-      "completed": false,
-      "title": "Посеять хлеб",
-      "description": "Посеять хлеб"
+      "title": "Third",
+      "description": "Some desc",
+      "completed": true
     },
     {
-      "id": 4,
-      "completed": false,
-      "title": "Посеять хлеб",
-      "description": "Посеять хлеб"
+      "id": 6,
+      "title": "Sixth",
+      "description": "Some desc",
+      "completed": false
     },
     {
-      "id": 5,
-      "completed": false,
-      "title": "Посеять хлеб",
-      "description": "Посеять хлеб"
+      "id": 7,
+      "title": "Seventh",
+      "description": "Some desc",
+      "completed": false
     }
   ]
 }

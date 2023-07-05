@@ -1,9 +1,10 @@
 import {Avatar, Container, Data} from './styles';
 import icon from 'assets/react.svg'
 import {useTranslation} from 'react-i18next';
+import {useAppSelector} from '../../hooks/redux.ts';
 
 function UserCard() {
-    const { username } = JSON.parse(localStorage.getItem('user') || "null")
+    const { username } = useAppSelector(state => state.userReducer)
 
     const { t } = useTranslation()
 
