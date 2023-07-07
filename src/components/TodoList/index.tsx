@@ -2,14 +2,13 @@ import {Container, TodoGrid} from './styles.ts';
 import {MemoTodo} from './TodoItem';
 import {useFetchPaginationTodosQuery} from '../../services/TodosService.ts';
 import {useState} from 'react';
-import {skipToken} from '@reduxjs/toolkit/query';
 import {Pagination} from 'antd';
 
 const TodoList = () => {
     const [page, setPage] = useState(1)
     const [limit] = useState(10)
 
-    const { data, isSuccess } = useFetchPaginationTodosQuery(page ? { page, limit } : skipToken)
+    const { data, isSuccess } = useFetchPaginationTodosQuery({ page, limit })
     const onChange = (page: number) => {
         setPage(page)
     }
