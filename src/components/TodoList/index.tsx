@@ -1,6 +1,6 @@
 import {Container, TodoGrid} from './styles.ts';
 import {MemoTodo} from './TodoItem';
-import {PagiTodo, useFetchPaginationTodosQuery} from '../../services/TodosService.ts';
+import {useFetchPaginationTodosQuery} from '../../services/TodosService.ts';
 import {useState} from 'react';
 import {skipToken} from '@reduxjs/toolkit/query';
 import {Pagination} from 'antd';
