@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import {Flex} from '../../styles';
 
 export const Container = styled(Flex)`
-  padding: 25px;
+  padding: 10px;
   flex-direction: column;
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 `
 
 export const ContentContainer = styled(Flex)`

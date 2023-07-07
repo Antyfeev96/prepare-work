@@ -7,6 +7,11 @@ export interface ITodo {
     completed: boolean
 }
 
+export interface PagiTodo {
+    list: ITodo[]
+    totalCount: number
+}
+
 export const todosAPI = createApi({
     reducerPath: 'todosAPI',
     baseQuery: fetchBaseQuery({baseUrl: 'https://jsonplaceholder.typicode.com'}),
@@ -16,6 +21,15 @@ export const todosAPI = createApi({
             query: () => ({
                 url: '/todos'
             }),
+            providesTags: ['Todo']
+        }),
+        fetchPaginationTodos: build.query<PagiTodo, { page: number, limit: number, offset?: number }>({
+            query: ({ page, limit }) => ({
+                url: `/todos?_page=${page}&_limit=${limit}`
+            }),
+            transformResponse(list: ITodo[], meta) {
+                return { list, totalCount: Number(meta?.response?.headers.get('X-Total-Count')) }
+            },
             providesTags: ['Todo']
         }),
         createTodo: build.mutation<ITodo, Partial<ITodo>>({
@@ -50,5 +64,6 @@ export const {
     useFetchAllTodosQuery,
     useCreateTodoMutation,
     useUpdateTodoMutation,
-    useDeleteTodoMutation
+    useDeleteTodoMutation,
+    useFetchPaginationTodosQuery
 } = todosAPI
