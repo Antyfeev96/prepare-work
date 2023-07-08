@@ -1,7 +1,7 @@
-import CreateTaskForm from '../../components/Form';
+import CreateTodoForm from '../../components/Form';
 
-const CreateTaskPage = () => {
-    return <CreateTaskForm/>;
+const CreateTodoPage = () => {
+    return <CreateTodoForm/>;
 };
 
-export default CreateTaskPage;
+export default CreateTodoPage;

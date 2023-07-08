@@ -2,7 +2,7 @@ import {Button, Form} from './styles.ts';
 import {FormEvent} from 'react';
 import {useTranslation} from 'react-i18next';
 
-const CreateTaskForm = () => {
+const CreateTodoForm = () => {
 
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -13,20 +13,16 @@ const CreateTaskForm = () => {
     return (
         <Form onSubmit={onSubmit}>
             <label>
-                <span>{t('createTask.title')}:</span>
+                <span>{t('createTodo.title')}:</span>
                 <input name="title" type="text"/>
             </label>
             <label>
-                <span>{t('createTask.description')}:</span>
-                <input name="description" type="text"/>
-            </label>
-            <label>
-                <span>{t('createTask.status')}</span>
+                <span>{t('createTodo.status')}</span>
                 <input type="checkbox" name="completed"/>
             </label>
-            <Button type="submit">{t('createTask.submitButton')}</Button>
+            <Button type="submit">{t('createTodo.submitButton')}</Button>
         </Form>
     );
 };
 
-export default CreateTaskForm;
+export default CreateTodoForm;

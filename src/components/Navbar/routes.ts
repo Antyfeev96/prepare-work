@@ -10,11 +10,11 @@ export const routes: Routes[] = [
     },
     {
         url: '/create',
-        title: 'createTask'
+        title: 'createTodo'
     },
     {
-        url: '/tasks',
-        title: 'tasksList'
+        url: '/todos',
+        title: 'todoList'
     },
     {
         url: '/logout',

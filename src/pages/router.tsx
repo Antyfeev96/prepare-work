@@ -2,9 +2,9 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import {LoginLayout, ProtectedLayout} from '../components/Layout';
 import Auth from './auth';
 import Home from './home';
-import CreateTaskPage from './create';
+import CreateTodoPage from './create';
 import Logout from './logout';
-import TasksPage from './tasks';
+import TodosPage from './todos';
 
 
 const AppRouter = () => {
@@ -13,8 +13,8 @@ const AppRouter = () => {
             <Routes>
                 <Route element={<ProtectedLayout/>}>
                     <Route path="home" element={<Home/>}/>
-                    <Route path="create" element={<CreateTaskPage/>}/>
-                    <Route path="tasks" element={<TasksPage/>}/>
+                    <Route path="create" element={<CreateTodoPage/>}/>
+                    <Route path="todos" element={<TodosPage/>}/>
                     <Route path="logout" element={<Logout/>}/>
                 </Route>
                 <Route element={<LoginLayout/>}>

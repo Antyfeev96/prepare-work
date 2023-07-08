@@ -2,21 +2,20 @@ import {Button, Container} from './styles.ts';
 import {memo} from 'react';
 import {useTranslation} from 'react-i18next';
 
-export const Task = () => {
+export const Todo = () => {
 
     const { t } = useTranslation()
 
     return (
         <Container>
-            <div>{t('tasksList.task.title')}</div>
-            <div>{t('tasksList.task.description')}</div>
+            <div>{t('todoList.todo.title')}:</div>
             <div>
-                <label htmlFor="">{t('tasksList.task.status')}:</label>
+                <label htmlFor="">{t('todoList.todo.status')}:</label>
                 <input type="checkbox" defaultChecked={Math.random() > 0.5}/>
             </div>
-            <Button>{t('tasksList.task.deleteButton')}</Button>
+            <Button>{t('todoList.todo.deleteButton')}</Button>
         </Container>
     );
 };
 
-export const MemoTask = memo(Task);
+export const MemoTodo = memo(Todo);
