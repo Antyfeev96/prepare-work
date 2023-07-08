@@ -5,8 +5,8 @@
   },
   "navbar": {
     "home": "Home",
-    "createTask": "Create task",
-    "tasksList": "Tasks list",
+    "createTodo": "Create todo",
+    "todoList": "Todo list",
     "logout": "Logout"
   },
   "home": {
@@ -14,21 +14,21 @@
     "city": "Saint-Petersburg",
     "spec": "Frontend"
   },
-  "createTask": {
+  "createTodo": {
     "title": "Name",
     "description": "Description",
     "status": "Execution status",
-    "submitButton": "Create task"
+    "submitButton": "Create todo"
   },
-  "tasksList": {
-    "searchQuery": "Enter task name",
+  "todoList": {
+    "searchQuery": "Enter todo name",
     "filterByStatus": "Filter by status",
     "status": "Execution status",
-    "task": {
+    "todo": {
       "title": "Title",
       "description": "Description",
       "status": "Status",
-      "deleteButton": "Delete task"
+      "deleteButton": "Delete todo"
     }
   },
   "auth": {

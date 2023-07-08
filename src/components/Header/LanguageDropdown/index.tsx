@@ -4,9 +4,7 @@ import {useTranslation} from 'react-i18next';
 const LanguageDropdown = () => {
 
     const { i18n } = useTranslation()
-    console.log(i18n)
     const toggleLanguage = async (value: string) => {
-        console.log(value)
         await i18n.changeLanguage(value)
     }
 

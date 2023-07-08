@@ -7,7 +7,7 @@ const SearchInput = () => {
 
     return (
         <Container>
-            <label htmlFor="search-query">{t('tasksList.searchQuery')}</label>
+            <label htmlFor="search-query">{t('todoList.searchQuery')}</label>
             <Input id="search-query"/>
         </Container>
     );

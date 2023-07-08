@@ -5,8 +5,8 @@
   },
   "navbar": {
     "home": "Главная",
-    "createTask": "Создать задачу",
-    "tasksList": "Список задач",
+    "createTodo": "Создать задачу",
+    "todoList": "Список задач",
     "logout": "Выйти"
   },
   "home": {
@@ -14,17 +14,17 @@
     "city": "Санкт-Петербург",
     "spec": "Фронтенд"
   },
-  "createTask": {
+  "createTodo": {
     "title": "Название",
     "description": "Описание",
     "status": "Статус выполнения",
     "submitButton": "Создать задачу"
   },
-  "tasksList": {
+  "todoList": {
     "searchQuery": "Введите название",
     "filterByStatus": "Фильтровать по статусу",
     "status": "Статус выполнения",
-    "task": {
+    "todo": {
       "title": "Название",
       "description": "Описание",
       "status": "Статус",
