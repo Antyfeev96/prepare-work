@@ -1,8 +1,10 @@
-import {Grid} from '../../styles.ts';
 import styled from 'styled-components';
+import {Pagination} from 'antd';
+import {Grid} from '../../styles.ts';
 
 
-export const Container = styled.div``
+export const Container = styled.div`
+`
 export const TodoGrid = styled(Grid)`
   height: 400px;
   grid-template-columns: repeat(3, 1fr);
@@ -15,4 +17,10 @@ export const TodoGrid = styled(Grid)`
   &::-webkit-scrollbar {
     display: none;
   }
+`
+
+export const Pagi = styled(Pagination)`
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 `

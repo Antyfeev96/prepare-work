@@ -2,6 +2,7 @@ import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import {persistReducer, persistStore} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import userReducer from './reducers/UserSlice.ts'
+import todosReducer from './reducers/TodosSlice.ts'
 import {
     FLUSH,
     REHYDRATE,
@@ -21,6 +22,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     userReducer,
+    todosReducer,
     [todosAPI.reducerPath]: todosAPI.reducer
 })
 

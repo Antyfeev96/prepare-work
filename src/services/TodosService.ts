@@ -23,9 +23,9 @@ export const todosAPI = createApi({
             }),
             providesTags: ['Todo']
         }),
-        fetchPaginationTodos: build.query<PagiTodo, { page: number, limit: number, offset?: number }>({
-            query: ({ page, limit }) => ({
-                url: `/todos?_page=${page}&_limit=${limit}`
+        fetchPaginationTodos: build.query<PagiTodo, { page: number, limit: number, title_like?: string }>({
+            query: ({ page, limit , title_like}) => ({
+                url: `/todos?_page=${page}&_limit=${limit}&title_like=${title_like}`
             }),
             transformResponse(list: ITodo[], meta) {
                 return { list, totalCount: Number(meta?.response?.headers.get('X-Total-Count')) }
